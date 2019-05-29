@@ -1,0 +1,21 @@
+controller 
+{
+  public int getcount(){
+    Stirng parms = request.getParameter("parms");
+    response(dao.getcount(parms));
+  }
+  public jsonarray getPagedData(){
+    Stirng parms = request.getParameter("parms");
+    response(dao.getPagedData(parms))
+  }
+}
+
+dao
+{
+  public int getcount(parms){
+    
+  }
+  public jsonarray getPagedData(parms(with skip and pagsize)){
+  
+  }
+}
