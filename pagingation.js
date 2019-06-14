@@ -104,7 +104,7 @@ pagination.prototype={
         $('#'+t.pagingBtnID+' [name="last"]').off().click(function(e){
             t.last(e);
         });
-        if(sort){
+        if(sort){//sort
             $('th.sort').each(function(idx,ele){
                 $(ele).find('a.sort-button').remove();
                 $(ele).append('<a class="mr-auto sort-button"><i class="fas fa-sort-up"></i></a>');
