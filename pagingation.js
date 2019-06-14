@@ -9,33 +9,18 @@ var pagination = function(config){
     this.clone = $('#'+this.pagingBtnID).clone();
     
     this.pageCount   = parseInt(this.totalRows/this.pagesize) + ((this.totalRows % this.pagesize) !=0 ? 1 : 0);
-     
-    document.querySelector('#'+config.pagingBtnID+' [name="totalPageNum"]').innerText=this.pageCount;
-    document.querySelector('#'+config.pagingBtnID+' [name="resultCount"]').innerHTML=this.totalRows;
-    var t = this;
-    t.newParm['pagesize'] = t.pagesize;
-    
-    $('#'+config.pagingBtnID+' [name="pageSelector"]').off().change(function(e){
-        t.moveTo(e);
-    });
-    $('#'+config.pagingBtnID+' [name="first"]').off().click(function(e){
-        t.first(e);
-    });
-    $('#'+config.pagingBtnID+' [name="next"]').off().click(function(e){
-        t.next(e);
-    });
-    $('#'+config.pagingBtnID+' [name="previous"]').off().click(function(e){
-        t.prev(e);
-    });
-    $('#'+config.pagingBtnID+' [name="last"]').off().click(function(e){
-        t.last(e);
-    });
+
+    this.newParm['pagesize'] = this.pagesize;
 
     document.getElementById(config.pagingBtnID).style.display=((config.totalRows<config.pagesize)?'none':'');
+    
+    this.init(config.sort);
+
     this.genSelect();
     
-    t.newParm['skip'] = 0
-    t.output(t.newParm);
+    this.newParm['skip'] = 0
+    
+    this.output(this.newParm);
 }
 pagination.prototype={
     newParm:{},
@@ -97,6 +82,51 @@ pagination.prototype={
     },
     reset:function(){
         $('#'+this.pagingBtnID).replaceWith(this.clone);
+    },
+    init:function(sort){
+        document.querySelector('#'+this.pagingBtnID+' [name="totalPageNum"]').innerText=this.pageCount;
+        document.querySelector('#'+this.pagingBtnID+' [name="resultCount"]').innerHTML=this.totalRows;
+        
+        var t = this;
+        
+        $('#'+t.pagingBtnID+' [name="pageSelector"]').off().change(function(e){
+            t.moveTo(e);
+        });
+        $('#'+t.pagingBtnID+' [name="first"]').off().click(function(e){
+            t.first(e);
+        });
+        $('#'+t.pagingBtnID+' [name="next"]').off().click(function(e){
+            t.next(e);
+        });
+        $('#'+t.pagingBtnID+' [name="previous"]').off().click(function(e){
+            t.prev(e);
+        });
+        $('#'+t.pagingBtnID+' [name="last"]').off().click(function(e){
+            t.last(e);
+        });
+        if(sort){
+            $('th.sort').each(function(idx,ele){
+                $(ele).find('a.sort-button').remove();
+                $(ele).append('<a class="mr-auto sort-button"><i class="fas fa-sort-up"></i></a>');
+                $(ele).off().click(function(){
+                    var isUP = $(this).find('i').attr('class').indexOf('up')>0 ; 
+                    $('.sort-button').html('<i class="fas fa-sort-up"></i>');
+                    if(isUP){//如果現在是up asc就換成desc
+                        t.sort($(this).attr('data-sort-name'),'D');
+                        $(this).find('i').removeClass('fa-sort-up').addClass('fa-sort-down');
+                    }else{//如果是down desc 就換成asc
+                        t.sort($(this).attr('data-sort-name'),'A');
+                        $(this).find('i').removeClass('fa-sort-down').addClass('fa-sort-up');
+                    }
+                })
+            });
+        }
+    },
+    sort:function(col,dir){
+        this.newParm['sortCol']=col;
+        this.newParm['sortDir']=dir;
+        this.first();
+        this.output(this.newParm);
     }
 }
 var PageMaker = function(config){
@@ -123,6 +153,7 @@ var PageMaker = function(config){
                     totalRows:rows,
                     pagesize:pagesize,
                     oriParm:parm,
+                    sort:config.sort,
                     loadData:function(newPagingParm){
                         $.ajax({
                             url:dataUrl,
