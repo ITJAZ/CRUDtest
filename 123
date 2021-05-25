@@ -1,98 +1,63 @@
-9587 | 502124 | shipmentlink EEC1 | 配合JPM RTPC 需先上一版收回訊的程式上PA |OPER-20201202-13539 | 2021-03-02 17:41:23
-A /trunk-qa/ec/src/com/shipmentonline/mfr1/dao/WorkingTableDao.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/core/FINSerializableTO.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/action/EEC1_RequestReceiver.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/service/EMailService.java
-A /trunk-qa/ec/src/com/shipmentonline/mfr1/dao/FINDao.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/to/EgaShoppingCartTO.java
-A /trunk-qa/ec/src/com/shipmentonline/mfr1/to/MFR1_WorkingTableInfo.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/to/EgaOrderTO.java
-A /trunk-qa/ec/web/ROOT/eec1/email/ConfirmContent.jsp
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/XMLUtil.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/action
-A /trunk-qa/ec/src/com/shipmentlink/eec1/core/FIN_WebAction.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/to/EgaFeeTO.java
-A /trunk-qa/ec/web/ROOT/eec1/email
-A /trunk-qa/ec/src/com/shipmentlink/eec1/to
-A /trunk-qa/ec/src/com/shipmentlink/eec1/core/FINException.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/core/RequestProcessor.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/core
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils
-A /trunk-qa/ec/src/com/shipmentlink/eec1/dao
-A /trunk-qa/ec/src/com/shipmentlink/eec1/service
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/JSPReader.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/core/FIN_Purpose.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/to/WorkingTO.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/dao/EGA_GenericDao.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/service/GenericService.java
-9590 | 502124 | shipmentlink EEC1 | 配合JPM RTPC 需先上一版收回訊的程式上PA |OPER-20201202-13539 | 2021-03-03 12:08:19
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/paging
-M /trunk-qa/ec/src/com/shipmentlink/eec1/action/EEC1_RequestReceiver.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/paging/ObjectDataStream.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/service/EgaOrderStatus.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/paging/PagingModel.java
-9631 | 502124 | shipmentlink EEC1 | 新增抓取JPM RTPC decline的soap xml |OPER-20201202-13539 | 2021-03-30 14:24:21
-M /trunk-qa/ec/src/com/shipmentlink/eec1/action/EEC1_RequestReceiver.java
-9714 | Kevin | 502124 | EEC1 美國電子支付  | FINAL上線 | OPER-20201202-13539 | 2021-05-21 17:37:33
-A /trunk-qa/ec/web/ROOT/efr1/jsp/EFR1_FeeOverviewGeneral.jsp
-M /trunk-qa/ec/src/com/shipmentlink/eec1/service/EMailService.java
-A /trunk-qa/ec/web/ROOT/eec1/jsp/blocks/EEC1_ConfirmLeaving.jsp
-A /trunk-qa/ec/src/com/shipmentlink/efr1/action/EFR1_ActionDispatcher.java
-A /trunk-qa/ec/web/ROOT/eec1/jsp/blocks/EEC1_SingleOrderView.jsp
-M /trunk-qa/ec/src/com/shipmentlink/eqp1/action/EQP1_SendPaymentRequest.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/dao/EGA_FeeDao.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/service/FeeService.java
-M /trunk-qa/ec/web/ROOT/eiv1/jsp/EIV1_StatusView.jsp
-M /trunk-qa/ec/web/ROOT/erm1/jsp/ERM1_StatusView.jsp
-A /trunk-qa/ec/web/ROOT/efr1/jsp/EFR1_FeeGeneralQSearch.jsp
-M /trunk-qa/ec/web/ROOT/eqp1/jsp/EQP1_UnpaidFeeOverview.jsp
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/ssl
-A /trunk-qa/ec/src/com/shipmentlink/eec1/service/OrderService.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/dao/EGA_OrderDao.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/service/JPMConnector.java
-A /trunk-qa/ec/web/ROOT/eec1/jsp/blocks
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/ssl/SSLFactory.java
-A /trunk-qa/ec/web/ROOT/eec1/jsp
-M /trunk-qa/ec/src/com/shipmentlink/eec1/service/GenericService.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/service/CurrencyChecker.java
-M /trunk-qa/ec/src/com/shipmentlink/eec1/dao/EGA_GenericDao.java
-A /trunk-qa/ec/web/ROOT/efr1/css/fn.css
-M /trunk-qa/ec/web/ROOT/eqp1/jsp/EQP1_QuickPayModule.jsp
-A /trunk-qa/ec/web/ROOT/eec1/jsp/EEC1_OrderOverview.jsp
-M /trunk-qa/ec/web/ROOT/efr1/js/fn.js
-A /trunk-qa/ec/web/ROOT/eec1/jsp/EEC1_ShoppingCart.jsp
-A /trunk-qa/ec/src/com/shipmentlink/eec1/action/EEC1_ActionDispatcher.java
-A /trunk-qa/ec/web/ROOT/eec1/jsp/blocks/EEC1_FeeUnpaidFeeQuickSearchBox.jsp
-M /trunk-qa/ec/src/com/shipmentlink/eec1/action/EEC1_RequestReceiver.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/ssl/JPMSSLFactory.java
-M /trunk-qa/ec/web/ROOT/efr1/jsp/EFR1_ExpenseSearchModule.jsp
-A /trunk-qa/ec/web/ROOT/eec1/jsp/EEC1_EPaymentModule.jsp
-A /trunk-qa/ec/src/com/shipmentonline/mfr1/to/PsnlTO.java
-A /trunk-qa/ec/web/ROOT/efr1/css
-A /trunk-qa/ec/web/ROOT/eec1/xml
-M /trunk-qa/ec/web/ROOT/eec1/email/ConfirmContent.jsp
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/ssl/AlwaysTrueHostnameVerifier.java
-M /trunk-qa/ec/web/ROOT/efr1/jsp/EFR1_InvoiceModule.jsp
-A /trunk-qa/ec/web/ROOT/eec1/jsp/EEC1_UnpaidFeeOverview.jsp
-M /trunk-qa/ec/web/ROOT/efr1/jsp/EFR1_ModuleStatusList.jsp
-A /trunk-qa/ec/src/com/shipmentlink/eec1/service/ShoppingCartService.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/to/EgaOrderDetailTO.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/ssl/SSLDemo.java
-M /trunk-qa/ec/web/ROOT/efr1/js/fn.min.js
-A /trunk-qa/ec/src/com/shipmentlink/eec1/dao/ShoppingCartDao.java
-M /trunk-qa/ec/src/com/shipmentlink/eec1/service/EgaOrderStatus.java
-A /trunk-qa/ec/web/ROOT/eec1/xml/EEC1_SysLanguage.xml
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/ssl/KeyStoreManager.java
-9716 | Kevin | 502124 | EEC1 美國電子支付  | FINAL上線; 弱點修改 | OPER-20201202-13539 | 2021-05-24 10:45:16
-M /trunk-qa/ec/web/ROOT/efr1/jsp/EFR1_FeeOverviewGeneral.jsp
-M /trunk-qa/ec/src/com/shipmentlink/eec1/action/EEC1_RequestReceiver.java
-M /trunk-qa/ec/src/com/shipmentlink/eec1/utils/ssl/JPMSSLFactory.java
-M /trunk-qa/ec/web/ROOT/eec1/jsp/blocks/EEC1_ConfirmLeaving.jsp
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/SecurityFile.java
-M /trunk-qa/ec/web/ROOT/eec1/email/ConfirmContent.jsp
-9720 | Kevin | 502124 | EEC1 美國電子支付  | FINAL上線;新增自動更新JPM憑證功能 | OPER-20201202-13539 | 2021-05-25 12:24:32
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/ssl/CertManager.java
-M /trunk-qa/ec/src/com/shipmentlink/eec1/utils/ssl/JPMSSLFactory.java
-A /trunk-qa/ec/src/com/shipmentlink/eec1/utils/ssl/SavingTrustManager.java
-9725 | Kevin | 502124 | EEC1 美國電子支付  | FINAL上線;新增自動更新JPM憑證功能;avoiding from SSC hardcoded password | OPER-20201202-13539 | 2021-05-25 14:03:39
-M /trunk-qa/ec/src/com/shipmentlink/eec1/utils/ssl/CertManager.java
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/action/EEC1_ActionDispatcher.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/action/EEC1_RequestReceiver.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/core/FINException.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/core/FINSerializableTO.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/core/FIN_Purpose.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/core/FIN_WebAction.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/core/RequestProcessor.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/dao/EGA_FeeDao.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/dao/EGA_GenericDao.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/dao/EGA_OrderDao.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/dao/ShoppingCartDao.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/service/CurrencyChecker.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/service/EMailService.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/service/EgaOrderStatus.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/service/FeeService.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/service/GenericService.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/service/JPMConnector.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/service/OrderService.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/service/ShoppingCartService.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/to/EgaFeeTO.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/to/EgaOrderDetailTO.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/to/EgaOrderTO.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/to/EgaShoppingCartTO.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/to/WorkingTO.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/utils/JSPReader.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/utils/SecurityFile.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/utils/XMLUtil.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/utils/paging/ObjectDataStream.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/utils/paging/PagingModel.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/utils/ssl/AlwaysTrueHostnameVerifier.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/utils/ssl/CertManager.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/utils/ssl/JPMSSLFactory.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/utils/ssl/KeyStoreManager.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/utils/ssl/SSLDemo.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/utils/ssl/SSLFactory.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eec1/utils/ssl/SavingTrustManager.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/efr1/action/EFR1_ActionDispatcher.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentlink/eqp1/action/EQP1_SendPaymentRequest.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentonline/mfr1/dao/FINDao.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentonline/mfr1/dao/WorkingTableDao.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentonline/mfr1/to/MFR1_WorkingTableInfo.class
+/ec/web/ROOT/WEB-INF/classes/com/shipmentonline/mfr1/to/PsnlTO.class
+/ec/web/ROOT/eec1/email/ConfirmContent.jsp
+/ec/web/ROOT/eec1/jsp/EEC1_EPaymentModule.jsp
+/ec/web/ROOT/eec1/jsp/EEC1_OrderOverview.jsp
+/ec/web/ROOT/eec1/jsp/EEC1_ShoppingCart.jsp
+/ec/web/ROOT/eec1/jsp/EEC1_UnpaidFeeOverview.jsp
+/ec/web/ROOT/eec1/jsp/blocks/EEC1_ConfirmLeaving.jsp
+/ec/web/ROOT/eec1/jsp/blocks/EEC1_FeeUnpaidFeeQuickSearchBox.jsp
+/ec/web/ROOT/eec1/jsp/blocks/EEC1_SingleOrderView.jsp
+/ec/web/ROOT/eec1/xml/EEC1_SysLanguage.xml
+/ec/web/ROOT/efr1/css/fn.css
+/ec/web/ROOT/efr1/js/fn.js
+/ec/web/ROOT/efr1/js/fn.min.js
+/ec/web/ROOT/efr1/jsp/EFR1_ExpenseSearchModule.jsp
+/ec/web/ROOT/efr1/jsp/EFR1_FeeGeneralQSearch.jsp
+/ec/web/ROOT/efr1/jsp/EFR1_FeeOverviewGeneral.jsp
+/ec/web/ROOT/efr1/jsp/EFR1_InvoiceModule.jsp
+/ec/web/ROOT/efr1/jsp/EFR1_ModuleStatusList.jsp
+/ec/web/ROOT/eiv1/jsp/EIV1_StatusView.jsp
+/ec/web/ROOT/eqp1/jsp/EQP1_QuickPayModule.jsp
+/ec/web/ROOT/eqp1/jsp/EQP1_UnpaidFeeOverview.jsp
+/ec/web/ROOT/erm1/jsp/ERM1_StatusView.jsp
